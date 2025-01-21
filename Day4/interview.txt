@@ -1,0 +1,72 @@
+
+1. What is Express.js, and what's its purpose?
+Express.js is a lightweight and flexible Node.js web application framework.
+Purpose: Simplifies the process of building web servers and APIs by providing tools and utilities for:
+Handling HTTP requests and responses.
+Defining routes.
+Middleware integration for request/response processing.
+
+
+2. How do you create a basic Express server?
+const express = require('express'); // Import Express
+const app = express(); // Create an Express app
+app.get('/', (req, res) => {
+  res.send('Hello, Express!');
+});
+app.listen(3000, () => {
+  console.log('Server is running on http://localhost:3000');
+});
+
+
+3. What does app.listen() do, and what are the port and callback?
+app.listen(port, callback) starts the Express server and listens for incoming requests on the specified port.
+Parameters:
+port: Port number for the server (e.g., 3000).
+callback: Optional function executed when the server starts successfully.
+
+
+4. What is a route in Express, and how do you create one?
+Route: A URL path and the corresponding HTTP method used to handle a specific request.
+app.get('/about', (req, res) => {
+  res.send('About Page');
+});
+
+
+5. What are wildcard routes and when are they used?
+Wildcard Routes: Routes that use * as a placeholder to match any URL.
+Use Case: Handling undefined routes or creating flexible patterns.
+app.get('*', (req, res) => {
+  res.status(404).send('Page Not Found');
+});
+
+
+6. What is Postman, and why is it useful for backend development?
+Postman: A tool for testing APIs by sending HTTP requests and viewing responses.
+Why Useful:
+Simplifies API testing without needing a frontend.
+Supports GET, POST, PUT, DELETE requests.
+Allows adding headers, body, and authentication easily.
+
+
+7. How do you send data to the backend using req.query, and when would you use this?
+req.query: Used to retrieve query parameters sent in the URL.
+Use Case: When sending optional or small amounts of data in the URL.
+Example:
+URL: http://localhost:3000/search?term=express
+app.get('/search', (req, res) => {
+  const term = req.query.term;
+  res.send(`Search term: ${term}`);
+});
+
+
+8. How do you send data to the backend using req.body, and when would you use this?
+req.body: Used to retrieve data sent in the request body (usually with POST, PUT, DELETE methods).
+Use Case: For sending larger or sensitive data (e.g., user details, form submissions).
+const express = require('express');
+const app = express();
+app.use(express.json()); // Middleware to parse JSON
+app.post('/submit', (req, res) => {
+  const { name, email } = req.body;
+  res.send(`Name: ${name}, Email: ${email}`);
+});
+

@@ -1,0 +1,48 @@
+ 1. Creating a Server with Express.js
+Concept: Express.js is a fast, unopinionated, minimalist web framework for 
+Node.js. It simplifies the process of creating web servers and handling 
+HTTP requests and responses.
+
+npm i express 
+ const express = require('express');
+ const app = express();
+ const port = 3000; 
+ app.get('/', (req, res) => {
+ res.send('Hello, World!'); 
+ });
+ app.listen(port, () => {
+ console.log(`Server is running on <http://localhost
+ >:${port}`);
+ });
+
+
+2. Wildcard Routes
+ Concept: Wildcard routes are used to catch any URL that doesn't match 
+any defined route. They are often used to handle (404 Not Found) errors.
+ Syntax: Use the asterisk (*) as a wildcard.
+code: 
+ app.get("*", (req, res) => {
+    res.send("404 Not Found");
+ })
+
+
+
+ 3. API development and testing using POSTMAN
+
+ What is Postman?
+ ->Postman is a tool used by developers to send test requests to APIs.
+ Why use it:
+ ->You can send different types of requests GET, POST, PUT, DELETE.
+ ->You can add data to these requests (query params and request body).
+ ->It shows you the response from your API.
+ ->Postman is like a "testing friend" for your backend.
+
+
+
+Difference Between req.query and req.body 
+req.query : Data is in the URL, visible in the address bar, and generally used 
+for filters or non sensitive data
+
+req.body : Data is in the request body, not visible, and usually used when 
+sending more complex data, or sensitive data.
+     it requires app.use(express.json()) middleware otherwise it will give undefined value
