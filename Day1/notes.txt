@@ -1,0 +1,55 @@
+Day 1 :
+
+Internet and its working
+Client and server 
+Node JS 
+npm
+modules and packages in node js
+import and export in node js
+
+
+
+1. Internet and Its Working
+
+Internet: A global network that connects computers and servers to exchange data.
+
+How It Works:
+
+->Client: Sends a request (e.g., browser searching on Google).
+->Server: Processes the request and sends back a response.
+->Data Transmission: Follows TCP/IP protocols over networks.
+
+2. Client and Server
+
+client: the one who sends the request for data or services.
+server : the computer which is programmed to send the response of client's request
+
+3. Node JS :
+
+ek javascript runtime environment jiski help se ham javascript ke code ko outside browser run kr skte hai or server side.
+chrome ke v8 engine se code nikal kar isko bnaya hai jo ki c++ me that
+
+Features of Node.js:
+->Asynchronous and Event-Driven: Handles multiple requests without waiting for any process to finish.
+->Single-Threaded Architecture: Uses a single thread to handle multiple requests efficiently via non-blocking I/O.
+->Cross-Platform: Runs on Windows, macOS, Linux, etc.
+Scalability: Handles thousands of concurrent connections.
+
+4. npm 
+->A tool for managing packages and dependencies in Node.js applications.
+->Comes installed by default with Node.js.
+
+5. modules and packages
+
+Modules: Reusable blocks of code that perform a specific task or function.
+  Purpose: Organize code into smaller, manageable pieces.
+ Types:
+  Core Modules: Built-in Node.js modules (e.g., fs, http, path).
+  Custom Modules: User-defined modules.
+  Third-Party Modules: Modules installed via npm.
+
+Packages: A collection of modules bundled together to provide specific functionality.
+ Purpose: Simplify tasks by providing ready-to-use tools and libraries.
+ Managed using npm (Node Package Manager).
+
+6. import and export
