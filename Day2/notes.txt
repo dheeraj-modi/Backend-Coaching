@@ -1,0 +1,43 @@
+Day 2 
+node modules
+node modules file structure 
+installing a package and using installing
+
+ 1. npm (Node Package Manager)
+  Package Manager: npm is the default package manager for Node.js. 
+  It's a command-line tool that comes bundled with Node.js when you install it.
+
+Key Functions of npm:
+ ->Installing Packages: Easily download and install packages from the npm registry into your project.
+ ->Managing Dependencies: Keep track of the packages your project relies on.
+ ->Running Scripts: Define and run custom scripts (e.g., start the server, run tests) defined in your package.json .
+ ->Publishing Packages: Allows you to create and share your own packages with the community
+
+  2. What are Packages?
+ Reusable Code: Packages are pre-written blocks of code (libraries, 
+frameworks, tools) that provide specific functionalities
+
+ 3. Understanding package.json
+ Project Configuration: The package.json file is a JSON file that stores metadata about your Node.js project.
+
+ name : The name of your project.
+ version : The version of your project.
+ description : A brief description of the project.
+ main : Specifies the entry point of your project.
+ scripts : Defines custom commands that can be run using 
+dependencies : Lists the packages that are required to run your 
+application.
+ devDependencies : Lists the packages that are used during development 
+but not required in production (e.g., testing libraries).
+
+
+ 4. Understanding package-lock.json
+ Exact Dependency Versions: This file records the precise versions of 
+dependencies and sub-dependencies used by your project (including exact 
+version number and the source where it was downloaded from)
+
+install:
+npm i cat-me
+
+use:
+const 
